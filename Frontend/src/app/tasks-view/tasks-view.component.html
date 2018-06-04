@@ -1,0 +1,14 @@
+<h2>All Tasks</h2>
+<div *ngIf='tasks'>
+	<ol class="tasks-view">
+	  	<li *ngFor="let task of tasks">
+		  	<hr>
+			{{task.title}}<br>
+			{{task.description}}<br>
+			{{task.reminderTime | date:'HH:mm:ss dd/MM/yyyy'}}<br>
+			{{task.createdBy}}<br>
+			{{task.assignedTo}}<br>
+			<hr>
+	  	</li>
+	</ol>
+</div>

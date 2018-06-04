@@ -1,0 +1,11 @@
+<h2>My Notifications:</h2>
+<div *ngIf='notifications'>
+	<ol class="user-notifications">
+	  	<li *ngFor="let notification of notifications">
+		  	<hr>
+				{{notification.text}}<br>
+				On: {{notification.timeCreated | date:'HH:mm:ss dd/MM/yyyy'}}<br>
+			<hr>
+	  	</li>
+	</ol>
+</div>

@@ -1,0 +1,19 @@
+<label class="center-block">User:
+	<select class="form-control" [formControl]="username">
+		<option *ngFor="let user of users" [value]="user.id">{{user.username}} ({{user.email}})</option>
+	</select>
+</label>
+<button (click)="onSubmit()" type="button" class="btn btn-success">Get Tasks</button>
+<div *ngIf='tasks'>
+	<ol class="user-tasks">
+	  	<li *ngFor="let task of tasks">
+		  	<hr>
+			{{task.title}}<br>
+			{{task.description}}<br>
+			{{task.reminderTime | date:'HH:mm:ss dd/MM/yyyy'}}<br>
+			{{task.createdBy}}<br>
+			{{task.assignedTo}}<br>
+			<hr>
+	  	</li>
+	</ol>
+</div>
