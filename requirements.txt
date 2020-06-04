@@ -4,3 +4,4 @@ django-cors-headers==2.2.0
 redis==2.10.6
 django-websocket-redis==0.5.2
 celery==3.1.23
+django-redis-sessions==0.6.1
