@@ -2,7 +2,7 @@ from .models import Task, Employee, Notification
 from .serializers import TaskSerializer, EmployeeSerializer, NotificationSerializer
 from rest_framework import generics
 from rest_framework import permissions
-from tasks import notify
+from .tasks import notify
 from datetime import datetime
 from django.utils import timezone
 
